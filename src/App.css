@@ -1,0 +1,144 @@
+ body {
+     margin: 0;
+     padding: 0;
+ }
+
+ .loading-Dual-ring {
+
+     display: block;
+     width: 100px;
+     height: 100px;
+     margin: auto;
+     border-radius: 50%;
+     border: 6px solid rgb(220, 80, 80);
+     border-color: rgb(222, 80, 80) transparent rgb(222, 80, 80) transparent;
+     animation-name: loading;
+     animation-duration: 2000ms;
+     animation-iteration-count: infinite;
+     animation-timing-function: cubic-bezier(0, 0.1, 0.7, 1);
+ }
+
+ @keyframes loading {
+     0% {
+         transform: rotate(0deg);
+     }
+
+     100% {
+         transform: rotate(360deg);
+     }
+
+ }
+
+
+ .searchContainer {
+     width: fit-content;
+     margin: 100px auto 100px auto;
+ }
+
+ .searchLabel {
+     display: block;
+     font-size: large;
+     margin-bottom: 10px;
+ }
+
+ #search {
+     display: block;
+     width: 500px;
+     height: 30px;
+     border-left: solid 1px black;
+     border-bottom: solid 1px black;
+     border-top: 0;
+     border-right: 0;
+ }
+
+ #search:focus {
+     border-left: solid 1px black;
+     border-bottom: solid 1px black;
+     border-top: 0;
+     border-right: 0;
+     outline: none;
+ }
+
+ .paginationContainer {
+     display: flex;
+     gap: 10px;
+     width: fit-content;
+     margin: 0 auto 50px auto;
+ }
+
+ .paginationBtn {
+     background-color: inherit;
+     border: 0;
+ }
+
+ /* story style */
+ .storiesContainer {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     width: fit-content;
+     margin: auto;
+     row-gap: 100px;
+     column-gap: 20px;
+ }
+
+ .story {
+     width: 500px;
+     border: 1px solid black;
+     border-radius: 3px;
+     box-sizing: border-box;
+     padding: 30px;
+     background-color: rgb(253, 221, 221);
+ }
+
+ .remove {
+     color: red;
+     cursor: pointer;
+ }
+
+ .readMore {
+     color: rgb(134, 134, 244)
+ }
+
+ a {
+     text-decoration: none;
+
+ }
+
+ .userAction {
+     display: flex;
+     gap: 20px;
+ }
+
+ @media only screen and (max-width:1040px) {
+     .storiesContainer {
+         grid-template-columns: 1fr;
+     }
+ }
+
+ @media only screen and (max-width:510px) {
+     .storiesContainer {
+         grid-template-columns: 1fr;
+     }
+
+     .story {
+         width: 300px;
+     }
+
+     #search {
+         width: 300px;
+     }
+ }
+
+ @media only screen and (max-width:310px) {
+     .storiesContainer {
+         grid-template-columns: 1fr;
+     }
+
+     .story {
+         width: 250px;
+     }
+
+     #search {
+         width: 250px;
+     }
+ }
